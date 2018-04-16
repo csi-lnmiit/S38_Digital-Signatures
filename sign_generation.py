@@ -10,9 +10,9 @@ def generate_keys():
     open("pub_key.pem",'w').write(pub_key.to_pem())
     #print type(priv_key)
     #print type(pub_key)
-    print sys.getsizeof(priv_key.to_string())
-    print len(priv_key.to_string())
-    print sys.getsizeof(SigningKey.from_string(priv_key.to_string(),curve=NIST192p))
+    print sys.getsizeof(pub_key.to_string())
+    print len(pub_key.to_string())
+    print sys.getsizeof(VerifyingKey.from_string(pub_key.to_string(),curve=NIST192p))
     #print sys.getsizeof(pub_key.to_string())
 	
 def generate_sign():
